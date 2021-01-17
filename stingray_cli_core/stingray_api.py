@@ -1,7 +1,6 @@
 import requests
 import json
-from stingray_base import StingrayBase
-
+from .stingray_base import StingrayBase
 
 class StingrayAPI(StingrayBase):
     """

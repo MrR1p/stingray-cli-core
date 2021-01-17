@@ -1,4 +1,4 @@
-from stingray_base import StingrayBase
+from .stingray_base import StingrayBase
 
 
 class StingrayToken(StingrayBase):
