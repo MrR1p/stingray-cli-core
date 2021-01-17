@@ -10,7 +10,6 @@ setup(
     description="Stingray core package",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://bitbucket.org/appsec-audit/stingray",
     packages=find_packages(),
     author_email='stingray@appsec.global',
     include_package_data=True,
@@ -20,6 +19,6 @@ setup(
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
-        "Operating System :: Linux",
+        "Operating System :: Unix",
     ],
 )

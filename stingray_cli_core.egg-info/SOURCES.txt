@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+stingray_cli_core/__init__.py
+stingray_cli_core/stingray_api.py
+stingray_cli_core/stingray_base.py
+stingray_cli_core/stingray_token.py
+stingray_cli_core.egg-info/PKG-INFO
+stingray_cli_core.egg-info/SOURCES.txt
+stingray_cli_core.egg-info/dependency_links.txt
+stingray_cli_core.egg-info/requires.txt
+stingray_cli_core.egg-info/top_level.txt

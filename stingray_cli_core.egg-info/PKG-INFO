@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: stingray-cli-core
+Version: 2.1
+Summary: Stingray core package
+Home-page: UNKNOWN
+Author: Stingray Technologies LLC
+Author-email: stingray@appsec.global
+License: UNKNOWN
+Description: #stingray_cli_core package
+        
+        This is a core package for remained stingray components. Include API to Stingray backend based on login/password method or by token.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Description-Content-Type: text/markdown
