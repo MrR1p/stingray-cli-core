@@ -10,6 +10,7 @@ setup(
     description="Stingray core package",
     long_description=long_description,
     long_description_content_type="text/markdown",
+    url="https://github.com/Swordfish-Security/stingray-cli-core",
     packages=find_packages(),
     author_email='stingray@appsec.global',
     include_package_data=True,
