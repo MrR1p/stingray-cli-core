@@ -211,6 +211,10 @@ class StingrayBase:
         """
         return requests.post(f'{self.url}/dasts/{scan_id}/stop/', headers=self.headers)
 
+    def get_scan_issues(self, scan_id):
+        return requests.get(f'{self.url}/dasts/{scan_id}/issues/',
+                            headers=self.headers)
+
     def get_engines(self):
         return requests.get(f'{self.url}/organizations/{self.current_context["company"]}/engines/',
                             headers=self.headers)
