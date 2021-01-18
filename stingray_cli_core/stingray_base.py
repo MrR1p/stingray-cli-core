@@ -36,6 +36,7 @@ class StingrayBase:
         data = {
             'name': project_info['name'],
             'description': project_info['description'],
+            'architecture_type': project_info['architecture_type']
         }
         return requests.post(f'{self.url}/organizations/{org_id}/projects/',
                              headers=self.headers,
@@ -132,6 +133,9 @@ class StingrayBase:
     def get_architectures(self):
         return requests.get(f'{self.url}/architectures/', headers=self.headers)
 
+    def get_architecture_types(self):
+        return requests.get(f'{self.url}/architecture_types/', headers=self.headers)
+
     def get_testcases(self):
         return requests.get(f'{self.url}/organizations/{self.current_context["company"]}/testcases/',
                             headers=self.headers)
@@ -161,9 +165,10 @@ class StingrayBase:
     def delete_testcase(self, testcase_id):
         return requests.delete(f'{self.url}/testcases/{testcase_id}/', headers=self.headers)
 
-    def upload_application(self, path):
+    def upload_application(self, path, architecture_type):
         headers_multipart = {'Authorization': self.headers['Authorization']}
         multipart_form_data = {
+            'architecture_type': architecture_type,
             'file': (os.path.split(path)[-1], open(path, 'rb'))
         }
         return requests.post(f'{self.url}/organizations/{self.current_context["company"]}/applications/',
@@ -324,3 +329,7 @@ class StingrayBase:
 
     def delete_rule(self, rule_id):
         return requests.delete(f'{self.url}/rules/{rule_id}/', headers=self.headers)
+
+    def download_report(self, dast_id):
+        report = requests.get(f'{self.url}/dasts/{dast_id}/report/', allow_redirects=True, headers=self.headers)
+        return report
