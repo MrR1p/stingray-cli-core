@@ -168,12 +168,12 @@ class StingrayBase:
     def upload_application(self, path, architecture_type):
         headers_multipart = {'Authorization': self.headers['Authorization']}
         multipart_form_data = {
-            'architecture_type': architecture_type,
             'file': (os.path.split(path)[-1], open(path, 'rb'))
         }
         return requests.post(f'{self.url}/organizations/{self.current_context["company"]}/applications/',
                              headers=headers_multipart,
-                             files=multipart_form_data)
+                             files=multipart_form_data,
+                             data={'architecture_type': architecture_type})
 
     def create_manual_scan(self, profile_id, app_id, arch_id):
         data = {

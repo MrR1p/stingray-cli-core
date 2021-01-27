@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="stingray_cli_core",
-    version='2.1.3',
+    version='2.1.4',
     author="Stingray Technologies LLC",
     description="Stingray core package",
     long_description=long_description,
